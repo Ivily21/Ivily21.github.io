@@ -1,0 +1,50 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #8a607c58;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(27, 27, 27, 0.1);
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  width: calc(100% - 12px);
+  padding: 6px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #582d5d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #98808cd7;
+}
+
+#resultado {
+  margin-top: 20px;
+  font-weight: bold;
+}
+fieldset {
+  background-color: rgb(168, 129, 205);
+}
