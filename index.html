@@ -3,89 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Níveis</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <title>Login - Cadrasto de Ônibus</title>
   </head>
   <body>
-    <div class="tudo">
+    <div class="quadrado">
     <header>
-      <i class="fa fa-home" style="margin: 10px"></i>
+      <h1 id="title">Login 🚍</h1>
+      
+    </header>
+<br></br>
 
-      <h1>Apontador</h1>
-      <p>Desenvolvimento WEB com JS</p>
-    --------------------------------------------------------------------------------------------------
-    </header> 
-    <div class="corpo">
-        <div id = "subtitulo">
-          <i class="fa fa-book">Materias e atividades</i>
-        </div>
-        <div id="desc">  
-        <p>Confira abaixo os materiais e atividades disponíveis para cada dia de aula:</p>
-        </div>
-        <main>
-      <section>
-        <details>
-        
-            <summary>Fevereiro</summary>
-            <details>
-          
-                <summary>Atividade 1</summary>
-                   <p>Trabalhamos com o console</p>
-                   <a href="../11/02/index.html" target="_blank">Atividade em sala de aula</a>
-              
-            </details>
-    
-            <details>
-                 <summary>Atividade 2</summary>
-                    <p>Trabalhamos com condições</p>
-                   <a href="../12/02/index.html">Atividade em sala de aula</a>
-            </details>
-    
-            <details>
-                  <summary>Atividade 3</summary>
-                    <p>Trabalhamos com inputs</p>
-                    <a href="../18/02/index.html">Atividade em sala de aula</a>
-            </details>
-    
-            <details>
-                  <summary>Atividade 4</summary>
-                    <p>Trabalhamos com calculadora de IMC</p>
-                    <a href="../20/02/index.html">Atividade em sala de aula</a>
-            </details>
-    
-            <details>
-                 <summary>Atividade 5</summary>
-                    <p>Trabalhamos com Seletores</p>
-                    <a href="../24/02/index.html">Atividade em sala de aula</a>
-            </summary>
-          
-
-          </details>
-
-        
-        </details>
-      </section>
-
-      <section>
-        <details>
-        
-          <summary>Março</summary>
-        <details>
-            <summary>Atividade 1</summary>
-              <p>Trabalhamos com Níveis</p>
-              <a href="../25/03/index.html">Atividade em sala de aula</a>
-            </div>
-      </details>
-
-        
-        
-
-      </section>
-    </main>
+    <form id="form" name="formulario">
+      <label for="id_nome">
+        Email:
+        <input
+          type="text"
+          name="nome"
+          id="id_nome"
+          minlength="4"
+          maxlength="50"
+          placeholder="Informe seu email"
+          required
+        />
+      </label>
+<br></br>
+      <label for="id_senha">
+        Senha:
+        <input
+          type="password"
+          name="senha"
+          id="id_senha"
+          placeholder="Informe sua senha"
+          required
+        />
+        <button type="button" onclick="mostrarSenha()">👁️</button>
+      </label>
+      <br></br><br>
+      <div class="botoes">
+        <button type="submit" id="enviar">ENTRAR</button>
+      </div>
+    </form>
   </div>
+    <script>
+      function mostrarSenha() {
+        const senha = document.getElementById("id_senha");
+        if (senha.type === "password") {
+          senha.type = "text";
+        } else {
+          senha.type = "password";
+        }
+      }
+
+      const emailCorreto = "admin@admin.com";
+      const senhaCorreta = "admin";
+
+      document
+        .getElementById("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const email = document.getElementById("id_nome").value;
+          const senha = document.getElementById("id_senha").value;
+
+          if (email === emailCorreto && senha === senhaCorreta) {
+            window.location.href = "sistema.html";
+          } else {
+            alert("Email ou senha incorretos. Tente novamente.");
+          }
+        });
+    </script>
+    <link rel="stylesheet" href="styleInicial.css" />
   </body>
 </html>

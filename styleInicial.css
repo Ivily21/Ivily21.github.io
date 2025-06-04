@@ -1,0 +1,74 @@
+:root {
+  --roxo: #7b1fa2;
+  --azul: #2196f3;
+  --verde: #a5d6a7;
+  --escuro: #2c2c2c;
+  --claro: #ffffff;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--roxo), var(--azul), var(--verde));
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quadrado {
+  width: 400px;
+  padding: 24px;
+  background: var(--claro);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--roxo);
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+input:focus {
+  border-color: var(--azul);
+  outline: none;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.botoes button {
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  background: var(--roxo);
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.botoes button:hover {
+  background: #5e1591;
+}

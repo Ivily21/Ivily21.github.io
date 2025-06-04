@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotas de Onibus</title>
+    <link rel="stylesheet" href="style.css" />
+  
+    <style>
+      .lista-onibus {
+        margin-top: 20px;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+      }
+
+      .item-onibus {
+        margin-bottom: 10px;
+        padding: 5px;
+        background-color: #f0f0f0;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body class="tudo">
+    <div id="quadrado">
+      <form id="formulario">
+        
+          <header>
+            <h3 id="title">ROTAS DE ÔNIBUS</h3>
+            <br></br>
+          </header>
+          <div id="informaçoes">
+          <label for="input_nome">
+            Nome:
+            <input
+              type="text"
+              id="input_nome"
+              placeholder="Informe o nome"
+              required
+              class="campo"
+            />
+        
+          </label>
+          <br /><br />
+          
+          <label for="input_linha">
+            Linha:
+            <input
+              type="number"
+              id="input_linha"
+              placeholder="Informe sua linha"
+              required
+              class="campo"
+            />
+          </div>
+          </label>
+          <br></br>
+          <div class="botoes">
+            <button type="submit" id="cadastrar">Cadastrar</button>
+            <button type="button" id="listar">Listar todos</button>
+          </div>
+          <br></br>
+          <br></br>
+          <br></br>
+
+      </form>
+    </div>
+
+    <div class="lista-onibus" id="listaOnibus"></div>
+
+    <dialog id="dialogTela">
+      <fieldset>
+        <legend>Modificações</legend>
+
+        <label for="edit_nome">
+          Nome:
+          <input
+            type="text"
+            id="edit_nome"
+            placeholder="Informe o nome"
+            required
+            class="campo"
+          />
+        </label>
+
+        <label for="edit_linha">
+          Linha:
+          <input
+            type="number"
+            id="edit_linha"
+            placeholder="Informe sua linha"
+            required
+            class="campo"
+          />
+        </label>
+
+        <div class="botoes">
+          <button id="atualizar">Atualizar</button>
+          <button id="fechar">Fechar</button>
+        </div>
+      </fieldset>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
